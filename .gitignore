@@ -1,0 +1,12 @@
+.data
+/node_modules/
+*/.DS_Store
+.DS_Store
+/src/css/
+/src/css/*
+/src/js/
+/src/js/*
+/src/images/
+/src/images/*
+/src/fonts/
+/src/fonts/*
