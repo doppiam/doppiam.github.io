@@ -34,7 +34,7 @@ gulp.task('less', function() {
 gulp.task('js', function() {
     var b = browserify({
         entries: [`${SOURCE_DIR}/js/main.js`],
-    });
+    }).transform('babelify', {presets: ['es2015', 'react']}).transform('envify');
 
     return b
         .bundle()
