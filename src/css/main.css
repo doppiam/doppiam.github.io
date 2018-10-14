@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url('../fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Gotham-Bold.otf') format('opentype'), url('../fonts/Gotham-Bold.woff') format('woff'), url('../fonts/Gotham-Bold.ttf') format('truetype'), url('../fonts/Gotham-Bold.svg#Gotham-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham-Light';
+  src: url('../fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Gotham-Light.otf') format('opentype'), url('../fonts/Gotham-Light.woff') format('woff'), url('../fonts/Gotham-Light.ttf') format('truetype'), url('../fonts/Gotham-Light.svg#Gotham-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-family: 'Gotham-Light';
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Gotham-Bold';
+}
+.page {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+}
+.section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  height: 200vh;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100vh;
+}
+.section .trigger {
+  position: absolute;
+  bottom: 0;
+  top: 12vw;
+  left: 0;
+}
+.section .triggerContent {
+  position: absolute;
+  bottom: 0;
+  top: 30vh;
+  left: 0;
+}
+.section .triggerExit {
+  position: absolute;
+  bottom: 20vh;
+  left: 0;
+}
+.content {
+  position: relative;
+}
+.title {
+  position: absolute;
+  top: 20vw;
+  left: 5vw;
+}
+.title h2 {
+  font-size: 4vw;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+.title h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Gotham-Light';
+  font-size: 5vw;
+  line-height: 1;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin: 0;
+  z-index: 1;
+}
+.title h4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Gotham-Light';
+  font-size: 5.4vw;
+  line-height: 1;
+  text-transform: uppercase;
+  opacity: 0.3;
+  margin: 0;
+  z-index: 1;
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+.desktop img,
+.mobile img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.desktop {
+  position: fixed;
+  right: -100vw;
+  width: 75vw;
+  bottom: 0;
+  z-index: 2;
+  visibility: hidden;
+}
+.mobile {
+  position: fixed;
+  right: 2vw;
+  width: 20vw;
+  bottom: -10vw;
+  z-index: 2;
+  visibility: hidden;
+}
+.info {
+  position: fixed;
+  border-radius: 0 8px 8px 0;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  bottom: 0;
+  opacity: 0;
+}
+.info p {
+  margin: 0;
+}
+.info span {
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+  display: block;
+}
+.info .jobs {
+  font-family: 'Gotham-Bold';
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.info .visit {
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 10px;
+  text-decoration: none;
+  text-align: right;
+  display: block;
+  width: 100%;
+}
+.porto .title {
+  color: #124c04;
+}
+.porto .info {
+  background-color: #124c04;
+}
+.contesta .title {
+  color: #01ccc9;
+}
+.contesta .info {
+  background-color: #01ccc9;
+}
+.sushi .title {
+  color: #c1600a;
+}
+.sushi .info {
+  background-color: #c1600a;
+}
+.red .title {
+  color: #ca000f;
+}
+.red .info {
+  background-color: #ca000f;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+}
+body.noscroll {
+  overflow: hidden;
+}
+.hidden {
+  display: none;
+}
+.clear {
+  clear: both;
+}
