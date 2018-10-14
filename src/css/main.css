@@ -186,6 +186,88 @@ h4 {
 .red .info {
   background-color: #ca000f;
 }
+.intro {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 100%;
+  height: 200vh;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #000;
+}
+.intro .content {
+  display: inline-block;
+  max-width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1485254767195-60704c46702e?ixlib=rb-0.3.5&s=4f4414ab8983b782def5d0c1548edc8a&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: 'Gotham-Bold';
+  color: transparent;
+  font-size: 3rem;
+}
+.intro .content a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 100%;
+  height: 200vh;
+  padding-bottom: 10vh;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #000;
+}
+.footer .content {
+  display: inline-block;
+  max-width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1529666759085-741eefcd3371?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1c6a893acf27a4cb7d445b5c207aa714&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: 'Gotham-Bold';
+  color: transparent;
+  font-size: 3rem;
+}
+.footer .content a {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  margin: 0 auto;
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
