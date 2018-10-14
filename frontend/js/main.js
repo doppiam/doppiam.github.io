@@ -3,66 +3,37 @@ window.jQuery = window.$ = $;
 var ScrollMagic = require("scrollmagic");
 require('../../node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min');
 
-// porto
-var controllerPorto = new ScrollMagic.Controller();
-var tweenPorto = new TimelineMax ()
-    .add([
-        TweenMax.fromTo(".porto .title h3", 1, {scale: 1.5, autoAlpha: 0.05, top: "-40vw"}, {top: "50vw", ease: Linear.easeNone}),
-        TweenMax.fromTo(".porto .title h4", 1, {scale: 3.5, autoAlpha: 0.3, top: "40vw"}, {top: "-5vw", ease: Linear.easeNone})
-    ]);
-var scenePorto = new ScrollMagic.Scene({triggerElement: ".porto .trigger", duration: $(window).height()})
-                .setTween(tweenPorto)
-                .addTo(controllerPorto);
+$(".section").each(function( index ) {
+    var name = $(this).attr('data-content');
+    var controller = new ScrollMagic.Controller();
+    var tween = new TimelineMax ()
+        .add([
+            TweenMax.fromTo(`.${name} .title h3`, 1, {scale: 1.5, autoAlpha: 0.05, top: "30vw"}, {top: "-30vw", ease: Linear.easeNone}),
+            TweenMax.fromTo(`.${name} .title h4`, 1, {scale: 3.5, autoAlpha: 0.3, top: "50vw"}, {top: "5vw", ease: Linear.easeNone})
+        ]);
+    var scene = new ScrollMagic.Scene({triggerElement: `.${name} .trigger`, duration: $(`.${name}`).height()})
+                    .setTween(tween)
+                    .addTo(controller);
 
-var controllerPortoContent = new ScrollMagic.Controller();
-var tweenPortoContent = new TimelineMax ()
-    .add([
-        TweenMax.fromTo(".porto .desktop", 1, {opacity: 0, right: "-100vw"}, {opacity: 1, right: "1vw", ease: Linear.easeNone}),
-        TweenMax.fromTo(".porto .mobile", 1, {opacity: 0, bottom: "-60vw"}, {opacity: 1, bottom: "-10vw", ease: Linear.easeNone}),
-        TweenMax.fromTo(".porto .info", 1, {bottom: "10vw"}, {bottom: "6vw", ease: Linear.easeNone})
-    ]);
-var scenePortoContent = new ScrollMagic.Scene({triggerElement: ".porto .triggerContent", duration: $(window).height()})
-    .setTween(tweenPortoContent)
-    .addTo(controllerPortoContent);
+    var controllerContent = new ScrollMagic.Controller();
+    var tweenContent = new TimelineMax ()
+        .add([
+            TweenMax.fromTo(`.${name} .desktop`, 1, {opacity: 0, right: "-90vw"}, {opacity: 1, visibility: "visible", right: "1vw", ease: Linear.easeNone}),
+            TweenMax.fromTo(`.${name} .mobile`, 1, {opacity: 0, bottom: "-50vw"}, {opacity: 1, visibility: "visible", bottom: "-10vw", ease: Linear.easeNone}),
+            TweenMax.fromTo(`.${name} .info`, 1, {bottom: "-10vw", opacity: 0}, {bottom: "6vw", opacity: 1, ease: Linear.easeNone})
+        ]);
+    var sceneContent = new ScrollMagic.Scene({triggerElement: `.${name} .triggerContent`, duration: $(`.${name}`).height()})
+        .setTween(tweenContent)
+        .addTo(controllerContent);
 
-var controllerPortoExit = new ScrollMagic.Controller();
-var tweenPortoExit = new TimelineMax ()
-    .add([
-        TweenMax.fromTo(".porto .desktop", 1, {right: "1vw"}, {opacity: 0, right: "-100vw", ease: Linear.easeNone}),
-        TweenMax.fromTo(".porto .mobile", 1, {bottom: "-10vw"}, {opacity: 0, bottom: "-60vw", ease: Linear.easeNone}),
-    ]);
-var scenePortoExit = new ScrollMagic.Scene({triggerElement: ".porto .triggerExit", duration: $(window).height()})
-    .setTween(tweenPortoExit)
-    .addTo(controllerPortoExit);
-
-// contesta
-var controllerContesta = new ScrollMagic.Controller();
-var tweenContesta = new TimelineMax ()
-    .add([
-        TweenMax.fromTo(".contesta .title h3", 1, {scale: 1.5, autoAlpha: 0.05, top: "-40vw"}, {top: "50vw", ease: Linear.easeNone}),
-        TweenMax.fromTo(".contesta .title h4", 1, {scale: 3.5, autoAlpha: 0.3, top: "40vw"}, {top: "-5vw", ease: Linear.easeNone}),
-    ]);
-var sceneContesta = new ScrollMagic.Scene({triggerElement: ".contesta .trigger", duration: $(window).height()})
-                .setTween(tweenContesta)
-                .addTo(controllerContesta);
-
-var controllerContestaContent = new ScrollMagic.Controller();
-var tweenContestaContent = new TimelineMax ()
-    .add([
-        TweenMax.fromTo(".contesta .desktop", 1, {opacity: 0, right: "-100vw"}, {opacity: 1, right: "1vw", ease: Linear.easeNone}),
-        TweenMax.fromTo(".contesta .mobile", 1, {opacity: 0, bottom: "-60vw"}, {opacity: 1, bottom: "-10vw", ease: Linear.easeNone}),
-        TweenMax.fromTo(".contesta .info", 1, {bottom: "10vw"}, {bottom: "6vw", ease: Linear.easeNone})
-    ]);
-var sceneContestaContent = new ScrollMagic.Scene({triggerElement: ".contesta .triggerContent", duration: $(window).height()})
-    .setTween(tweenContestaContent)
-    .addTo(controllerContestaContent);
-
-var controllerContestaExit = new ScrollMagic.Controller();
-var tweenContestaExit = new TimelineMax ()
-    .add([
-        TweenMax.fromTo(".contesta .desktop", 1, {right: "1vw"}, {opacity: 0, right: "-100vw", ease: Linear.easeNone}),
-        TweenMax.fromTo(".contesta .mobile", 1, {bottom: "-10vw"}, {opacity: 0, bottom: "-60vw", ease: Linear.easeNone}),
-    ]);
-var sceneContestaExit = new ScrollMagic.Scene({triggerElement: ".contesta .triggerExit", duration: $(window).height()})
-    .setTween(tweenContestaExit)
-    .addTo(controllerContestaExit);
+    var controllerExit = new ScrollMagic.Controller();
+    var tweenExit = new TimelineMax ()
+        .add([
+            TweenMax.fromTo(`.${name} .desktop`, 1, {right: "1vw"}, {opacity: 0, right: "-100vw", ease: Linear.easeNone}),
+            TweenMax.fromTo(`.${name} .mobile`, 1, {bottom: "-10vw"}, {opacity: 0, bottom: "-60vw", ease: Linear.easeNone}),
+            TweenMax.fromTo(`.${name} .info`, 1, {left: 0}, {left: "-100%", ease: Linear.easeNone}),
+        ]);
+    var sceneExit = new ScrollMagic.Scene({triggerElement: `.${name} .triggerExit`, duration: $(`.${name}`).height()})
+        .setTween(tweenExit)
+        .addTo(controllerExit);
+});

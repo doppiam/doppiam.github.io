@@ -7,9 +7,10 @@
     display: flex;
     flex: 1;
     width: 100%;
-    height: 250vh;
+    height: 200vh;
     position: relative;
     overflow: hidden;
+    padding-bottom: 100vh;
 
     .trigger {
         position: absolute;
@@ -20,13 +21,12 @@
     .triggerContent {
         position: absolute;
         bottom: 0;
-        top: 80vh;
+        top: 30vh;
         left: 0;
     }
     .triggerExit {
         position: absolute;
-        bottom: 0;
-        top: 215vh;
+        bottom: 20vh;
         left: 0;
     }
 }
@@ -88,22 +88,27 @@
     right: -100vw;
     width: 75vw;
     bottom: 0;
+    z-index: 2;
+    visibility: hidden;
 }
 .mobile {
     position: fixed;
     right: 2vw;
     width: 20vw;
     bottom: -10vw;
+    z-index: 2;
+    visibility: hidden;
 }
 
 .info {
-    position: absolute;
+    position: fixed;
     border-radius: 0 8px 8px 0;
     background-color: #000;
     color: #fff;
-    padding: 10px 10px 10px 20px;
+    padding: 10px 20px 10px 20px;
     box-sizing: border-box;
     bottom: 0;
+    opacity: 0;
 
     p {
         margin: 0;
@@ -141,5 +146,29 @@
     }
     .info {
         background-color: #124c04;
+    }
+}
+.contesta {
+    .title {
+        color: #01ccc9;
+    }
+    .info {
+        background-color: #01ccc9;
+    }
+}
+.sushi {
+    .title {
+        color: #c1600a;
+    }
+    .info {
+        background-color: #c1600a;
+    }
+}
+.red {
+    .title {
+        color: #ca000f;
+    }
+    .info {
+        background-color: #ca000f;
     }
 }
