@@ -213,12 +213,16 @@ h4 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-clip: text;
   -webkit-background-clip: text;
   font-family: 'Gotham-Bold';
   color: transparent;
   font-size: 3rem;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .intro .content {
+    background-attachment: fixed;
+  }
 }
 .intro .content a {
   color: #fff;
@@ -252,12 +256,16 @@ h4 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-clip: text;
   -webkit-background-clip: text;
   font-family: 'Gotham-Bold';
   color: transparent;
   font-size: 3rem;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .footer .content {
+    background-attachment: fixed;
+  }
 }
 .footer .content a {
   display: inline-block;

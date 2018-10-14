@@ -188,12 +188,16 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
         background-clip: text;
         -webkit-background-clip: text;
         font-family: @font-bold;
         color: transparent;
         font-size: 3rem;
+
+        @media screen and (-webkit-min-device-pixel-ratio:0) {  
+            background-attachment: fixed;
+        }
+        
         a {
             color: #fff;
             text-decoration: none;
@@ -217,12 +221,16 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
         background-clip: text;
         -webkit-background-clip: text;
         font-family: @font-bold;
         color: transparent;
         font-size: 3rem;
+
+        @media screen and (-webkit-min-device-pixel-ratio:0) {  
+            background-attachment: fixed;
+        }
+
         a {
             display: inline-block;
             padding: 5px 10px;
